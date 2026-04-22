@@ -1,34 +1,72 @@
-# Outlook Meeting CLI Pro
+# Outlook Meeting Creator
 
-Crear reuniones de Outlook desde **Tilix/WSL** usando Bash que llama a PowerShell + Outlook COM.
+Create Microsoft Outlook meetings directly from **WSL / Bash / Tilix** using PowerShell automation.
 
-## Características
+The use case is that can be used in while/for loop to create mutiple meeting meeting spam ;-)
 
-- Parámetros por línea de comandos
-- Vista previa o envío directo
-- Validación básica de fecha/hora
-- Invitados múltiples
-- Compatible con WSL
+Other use case is to create a meeing under some system alert, so firs time in the morning the IT guys have to go to the meeting room, sorry guys :-)
 
-## Requisitos
+## Version
 
-- Windows con Outlook clásico instalado
-- WSL Ubuntu
-- `powershell.exe` disponible desde WSL
+**v1.2 Limpia**
 
-## Uso
+## Features
+
+- Create Outlook calendar meetings from terminal
+- Works from Ubuntu WSL / Tilix
+- Uses PowerShell + Outlook COM
+- Add multiple attendees
+- Set date, time, duration and location
+- Preview meeting before sending
+- Direct send option
+- Shows active Outlook account in console
+
+## Requirements
+
+- Windows 10 / 11
+- Microsoft Outlook Classic Desktop installed
+- WSL with Ubuntu
+- `powershell.exe` available from WSL
+
+## Files
+
+- `meeting_v1.2.sh` → main script
+
+## Usage
 
 ```bash
-chmod +x meeting.sh
-./meeting.sh --profile "Empresa" --subject "Reunión semanal" --date 2026-04-25 --time 15:00 --duration 45 --attendees "a@x.com;b@x.com" --location "Teams"
+chmod +x meeting_v1.2.sh
+
+./meeting_v1.2.sh \
+--profile "Empresa" \
+--subject "Reunión Comercial" \
+--date 2026-04-25 \
+--time 15:00 \
+--duration 60 \
+--attendees "a@x.com;b@x.com" \
+--location "Teams" \
+--body "Revisar pendientes"
 ```
 
-## Envío directo
+## Direct Send
 
 ```bash
-./meeting.sh ... --send
+./meeting_v1.2.sh ... --send
 ```
 
-## Nota
+## Notes
 
-Outlook COM normalmente usa el perfil actualmente abierto o el predeterminado.
+- Outlook usually uses the currently opened profile or the default profile.
+- For best results, open Outlook first with the desired account.
+
+## Example Workflow
+
+WSL / Tilix → Bash Script → PowerShell → Outlook → Meeting Created
+
+## License
+
+MIT
+
+## Author
+
+Hubert Abasto
