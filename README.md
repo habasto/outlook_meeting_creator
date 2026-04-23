@@ -2,9 +2,9 @@
 
 Create Microsoft Outlook meetings directly from **WSL / Bash / Tilix** using PowerShell automation.
 
-The use case is that can be used in while/for loop to create mutiple meeting meeting spam ;-)
+The use case is that can be used in while/for loop to create mutiple meetings
 
-Other use case is to create a meeing under some system alert, so firs time in the morning the IT guys have to go to the meeting room, sorry guys :-)
+Other use case is to create a meeing under some system alert
 
 ## Version
 
